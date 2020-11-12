@@ -1,0 +1,20 @@
+
+    
+<ul ngbNav [activeId]="route.fragment | async" class="nav-tabs list-inline mx-auto justify-content-center">
+   <li class="mr-5"> <img src="assets/img/Red Grill and Restaurant Logo.png" style="widows: 50px;height:50px"/> </li>
+   
+    <li [ngbNavItem]="link.fragment" *ngFor="let link of links">
+      <a ngbNavLink routerLink="."  [fragment]="link.fragment">{{ link.title }}</a>
+    </li>
+    <li ngbDropdown class="nav-item">
+        <a href (click)="false" class="nav-link" ngbDropdownToggle>Pages</a>
+        <div ngbDropdownMenu>
+          <button ngbDropdownItem>Action</button>
+          <button ngbDropdownItem>Another action</button>
+          <button ngbDropdownItem>Something else here</button>
+          <div class="dropdown-divider"></div>
+          <button ngbDropdownItem>Separated link</button>
+        </div>
+      </li>
+  </ul>
+ 
